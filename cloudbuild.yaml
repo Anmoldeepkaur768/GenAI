@@ -37,7 +37,7 @@ steps:
   args: ['apply', '-f', './k8s/ui-deployment.yaml']
   env:
     - 'CLOUDSDK_CONTAINER_CLUSTER=anmol'
-    - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
+    - 'CLOUDSDK_COMPUTE_ZONE=us-central1'
     - 'CLOUDSDK_CORE_PROJECT=cbd3345-424200'
 - name: 'gcr.io/cloud-builders/kubectl'
   args: ['apply', '-f', './k8s/ui-service.yaml']
