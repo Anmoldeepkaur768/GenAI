@@ -26,9 +26,9 @@ steps:
     - 'container'
     - 'clusters'
     - 'get-credentials'
-    - 'anmolr'
+    - 'anmol'
     - '--zone'
-    - 'us-central1-c'
+    - 'us-central1'
     - '--project'
     - 'cbd3345-424200'
 
@@ -43,7 +43,7 @@ steps:
   args: ['apply', '-f', './k8s/ui-service.yaml']
   env:
     - 'CLOUDSDK_CONTAINER_CLUSTER=anmol'
-    - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
+    - 'CLOUDSDK_COMPUTE_ZONE=us-central1'
     - 'CLOUDSDK_CORE_PROJECT=cbd3345-424200'
 
 # Step 8: Apply Flask deployment and service
@@ -51,13 +51,13 @@ steps:
   args: ['apply', '-f', './k8s/flask-deployment.yaml']
   env:
     - 'CLOUDSDK_CONTAINER_CLUSTER=anmol'
-    - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
+    - 'CLOUDSDK_COMPUTE_ZONE=us-central1'
     - 'CLOUDSDK_CORE_PROJECT=cbd3345-424200'
 - name: 'gcr.io/cloud-builders/kubectl'
   args: ['apply', '-f', './k8s/flask-service.yaml']
   env:
     - 'CLOUDSDK_CONTAINER_CLUSTER=anmol'
-    - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
+    - 'CLOUDSDK_COMPUTE_ZONE=us-central1'
     - 'CLOUDSDK_CORE_PROJECT=cbd3345-424200'
 
 images:
