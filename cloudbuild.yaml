@@ -26,11 +26,11 @@ steps:
     - 'container'
     - 'clusters'
     - 'get-credentials'
-    - 'navicluster'
+    - 'anmolr'
     - '--zone'
     - 'us-central1-c'
     - '--project'
-    - 'project897927-429912'
+    - 'cbd3345-424200'
 
 # Step 7: Apply UI deployment and service
 - name: 'gcr.io/cloud-builders/kubectl'
