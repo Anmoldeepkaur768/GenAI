@@ -15,7 +15,7 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = SERVICE_ACCOUNT_FILE
 
 # Replace with your secret name and project ID
 SECRET_NAME = "GenAI"
-PROJECT_ID = "project897927-429912"
+PROJECT_ID = "cbd3345-424200"
 
 def get_api_key_from_secret_manager(secret_name, project_id):
     client = secretmanager.SecretManagerServiceClient()
